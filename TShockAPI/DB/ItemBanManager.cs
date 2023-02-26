@@ -28,7 +28,7 @@ namespace TShockAPI.DB
 	public class ItemBanManager
 	{
 		/// <summary>
-		/// Retrieves a List of all regions
+		/// Retrieves a List of all item bans
 		/// </summary>
 		public List<ItemBan> RetrieveAllItembans()
 		{
