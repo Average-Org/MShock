@@ -28,7 +28,6 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using MaxMind;
-using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using Rests;
 using Terraria;
