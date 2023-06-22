@@ -28,7 +28,6 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using MaxMind;
-using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using Rests;
 using Terraria;
@@ -85,7 +84,7 @@ namespace TShockAPI
 		/// <summary>Players - Contains all TSPlayer objects for accessing TSPlayers currently on the server</summary>
 		public static TSPlayer[] Players = new TSPlayer[Main.maxPlayers];
 		/// <summary>Bans - Static reference to the ban manager for accessing bans &amp; related functions.</summary>
-		public static BanManager Bans;
+		public static PlayerBanManager Bans;
 		/// <summary>Warps - Static reference to the warp manager for accessing the warp system.</summary>
 		public static WarpManager Warps;
 		/// <summary>Regions - Static reference to the region manager for accessing the region system.</summary>
@@ -366,7 +365,7 @@ namespace TShockAPI
 				Backups = new BackupManager(Path.Combine(SavePath, "backups"));
 				Backups.KeepFor = Config.Settings.BackupKeepFor;
 				Backups.Interval = Config.Settings.BackupInterval;
-				Bans = new BanManager(DB);
+				Bans = new PlayerBanManager(DB);
 				Warps = new WarpManager(DB);
 				Regions = new RegionManager(DB);
 				UserAccounts = new UserAccountManager(DB);
